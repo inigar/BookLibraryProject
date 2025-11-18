@@ -1,0 +1,28 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+form button, li button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
