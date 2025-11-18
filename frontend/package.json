@@ -1,0 +1,96 @@
+{
+  "name": "book-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+{
+  "info": {
+    "name": "Book API - Beginner Project",
+    "_postman_id": "b9c44f5f-458b-4c66-bfcc-f1c3d3fa9b28",
+    "description": "Simple CRUD Book API for beginners using Node + Express.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/books",
+          "host": ["{{base_url}}"],
+          "path": ["books"]
+        }
+      }
+    },
+    {
+      "name": "Get Book By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/books/1",
+          "host": ["{{base_url}}"],
+          "path": ["books", "1"]
+        }
+      }
+    },
+    {
+      "name": "Add New Book",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"New Book\",\n    \"author\": \"Author Name\",\n    \"year\": 2024\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/books",
+          "host": ["{{base_url}}"],
+          "path": ["books"]
+        }
+      }
+    },
+    {
+      "name": "Update Book",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Updated Title\",\n    \"author\": \"Updated Author\",\n    \"year\": 2025\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/books/1",
+          "host": ["{{base_url}}"],
+          "path": ["books", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Book",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/books/1",
+          "host": ["{{base_url}}"],
+          "path": ["books", "1"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    }
+  ]
+}
